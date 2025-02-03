@@ -1,0 +1,98 @@
+voglio costruire un sistema esperto che lavora su una base di conoscenza (ontologia) popolata da individui che appartengono a classi come persone,prodotti libri .
+L obbiettivo  di questo sistema esperto è verificare se un libro è un best seller o meno.
+Bisogna definire tutta una serie di regole di inferenza che indicano se un libro è un best seller o meno.
+
+
+inizia a creare classi che sono:
+EDITORE , Persona, Prodotto.
+
+Di prodotto si crea delle sottoclassi come libro Cd e Canzone 
+Della classe persona si crea Autore , ScrittoreDiLibri
+
+Si crea delle object property :
+haAutore , essa lega il prodotto  ad una persona   quindi quidi dominio è prodotto mentre codominio/range è persona
+èAutoreDi essa è l inversa di haAutore quindi inverse of haAutore quindi il dominio e range saranno invertiti 
+haCoAutore che ha dominio persona e range ha persona (significa che una persona lavora con un altra persona) tale proprieta è simmetrica quindi spunta la casella simmetrica
+haPubblicato come dominio ha editore e come range avra libro
+
+
+Poi definisce la DataProperty:
+èUnLetterato che ha come dominio persona e range un booleano mi dice se una persona è un letterato o meno 
+numeroPagine dominio libro e range intero
+copieVendute dominio libro e range intero
+genereLetterario dominio libro e range stringa
+èAutorevole dominmio editore e range booleano mi dice se un editore è autorevole oppure no
+
+
+Poi passa a popolare l ontologia quindi mette gli individui individuals by class :
+crea un libro chiamato Il_labirinto e gli associo qualcuna delle dataProperty prima indicate copie vendute e metto 10000000 e pure numeroPagine 450 e definisce genereLetterario.
+secondo libro la_notte_eterna copie vendute 6784 e numero pagine 250 e genere letterario Mitologico 
+Creo un Editore RBA e come Object propery gli do hapubblicato e gli inserisco la_notte_eterna Il_labirinto e poi gli do la dataproperty è autorevole settato a true 
+
+creo altri individuo di tipo persona:
+Alfredo gli do è autore di il_labirinto 
+Francesca è autore di il_labirinto
+Paolo è autore di la_notte_eterna.
+
+
+Vado a definire il sistema esperto composto dalle regole adesso minuto 11
+va a definire una serie di regole SWirrel per poterla scrivere si usa lo SWRL Tab e poi andare su new a destra 
+regola 1 : se un libro l è stato scritto dalla persona x , l ha come autore x questo lo devo scrivere in SWRL
+ci saranno tutta una serie di condizioni separati da () ^ () -> haAutore     dove ha Autore è l object propery che vogliamo realizzare quali saranno quelle condizioni ?
+
+Persona(?x) questo significa sia x un individuo della classe persona prima condizione o predicato 1 
+Libro(?l) individuo della classe libro 
+èAutoreDi(?x,?l) questa è l ultima condizione che è una object property piu usata e che ha come dominio persona e codominio il libro
+
+Tali condizioni sono messe tutte in ^ end logico quindi quando tutte e 3 sono verificate allora ottengo quella di destra haAutore ci sara quindi un objectProperty che è ha Autore che colleghera l con x
+Persona(?x) ^ Libro(?l) ^ èAutoreDi(?x,?l) -> haAutore(?l,?x)     questa è la regola finale 
+
+REgola 2 : minuto 18:30
+se una persona ha scritto un libro allora è un lettarato  ,   questo significa fare una classificazione infatti avevamo definito una data property èUnLetterato con dominio persona . 
+
+Persona(?x) ^ Libro(?x) ^ èAutoreDi(?x,?l) -> èUnLetterato(?x,True)    ha messo true perche essendo un booleano lo devo impostare come tale
+
+tutto quello che inseriamo all interno delle regole deve gia essere stato definito  oppure deve essere un predicato Build in !!! con le regole SWRL non stiamo andando a creare nuove dataProperty o altro le sto andando di nuovo ad applicare 
+
+
+Regola 3 minuto 31:40 di tipo riclassificazione ! 
+Se una persona ha scritto un libro, è anche instanza della classe Autore e Scrittore di libri 
+
+Noi avevamo specializzato la classe persona in Autore e scrittore di libri in 2 sottoclassi diverse cosi voglio un modo di essere individuo di entrambe .
+Persona(?x) ^ Libro(?l) ^ eAutoredi(?x,?l) -> Autore (?x) ^ ScrittoreDiLibri(?x)
+
+adesso ho inserito 2 predicati a destra e essi sono veri se quelli a sx sono tutti e 3 vere ! Ho fatto una doppia riclassificazione x inviduo della classe persona se è autore di un libro allora egli sara un individuo della classe autore e anche della classe Scrittore di libri! 
+
+Regola 4 :39:30 deve utilizzare i risultati delle regole precendenti !
+ Se un libro ha piu di 300 pagine e ha venduto piu di 10000 copie , ed è pubblicato da una fonte autorevole allora è un Best Seller! 
+
+Prima indico la dataProperty èUnBestseller che ha come dominio prodotto e range un booleano vero o falso
+
+creamo la regola iniziando a definire su cosa stiamo andando a lavorare quindi libro 
+
+Libro(?l) ^ Editore(?e) ^ haPubblicato(?e,?l)  -> èUnBestseller(?l,true)  quindi cosa sto dicendo : sto dicendo che se una casa editrice e ha pubblicato un libro l allora quel libro è un bestseller vogliamo un ulteriore condizione voglio solo quei libri che sono pubblicati da una casa editrice Autorevole 
+
+Libro(?l) ^ Editore(?e) ^ haPubblicato(?e,?l) ^ èAutorevole(?e,True) -> èUnBestseller(?l,True)   
+
+poi inserisco solo quelli che hanno un certo numero di pagine 
+
+Libro(?l) ^ Editore(?e) ^ haPubblicato(?e,?l) ^ èAutorevole(?e,True) ^ numeroPagine(?l,?numL) -> èUnBestseller(?l,True)           devo verificare se il numero di pagine è sufficiente e usiamo una regola build in di SWRL , uso la libreria swrlb e il nome del predicato build in greaterThan()  esso confronta un variabile con un numero di riferimento quindi     
+
+Libro(?l) ^ Editore(?e) ^ haPubblicato(?e,?l) ^ èAutorevole(?e,True) ^ numeroPagine(?l,?numL) ^ swrlb:greaterThan(?lnumL,300) -> èUnBestseller(?l,True)  
+
+Closed World e Open World , mondo aperto significa che da qualche parte ci sara un altra regola che rende quel predicato vero e potrei definire un altra regola che se un libro ha genere letterario mitologico allora è un best seller 
+
+ultima condizione è che deve avere piu di 1000 copie usando la dataproperty di riferimento copieVendute 
+
+Libro(?l) ^ Editore(?e) ^ haPubblicato(?e,?l) ^ èAutorevole(?e,True) ^ numeroPagine(?l,?numL) ^ swrlb:greaterThan(?lnumL,300) ^ copieVendute(?l,?numCop) ^ swrlb:greaterThan(?numCop,10000) -> èUnBestseller(?l,True)  
+ questa è la nostra regola finale e uso le regole precedenti 
+
+Regola 5 49:50
+
+Se un autore di libri ha scritto un bestseller allora è uno scrittore famoso .   Va a definire la proprieta èUnoScrittoreFamoso che ha come dominio Persona e range booleano
+
+Autore(?x) ^ Libro(?l) ^ èAutoreDi(?x,?l) ^ èunBestseller(?l,True) -> èUnoScrittoreFamoso(?x,True)
+
+
+
+Per salvare l inferenza otteneta dai resoners bisogna  far partire il REASONER e poi premere Run Drools e poi Drools--> OWL  dentro SWRL Tab

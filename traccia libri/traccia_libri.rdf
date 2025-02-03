@@ -1,0 +1,727 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri"
+     xml:base="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:traccia_libri="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#haAutore -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#haAutore">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#èAutoreDi"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Prodotto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Persona"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#haCoAutore -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#haCoAutore">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Persona"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Persona"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#haPubblicato -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#haPubblicato">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Editore"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Libro"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#èAutoreDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#èAutoreDi"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#copieVendute -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#copieVendute">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#genereLetterario -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#genereLetterario">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#numeroPagine -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#numeroPagine">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Libro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#èAutorevole -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#èAutorevole">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Editore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#èUnLetterato -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#èUnLetterato">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Autore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Autore">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Persona"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#ScrittoreDiLibri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#BestSeller -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#BestSeller">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Libro"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Canzone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Canzone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Prodotto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Cd -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Cd">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Prodotto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Editore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Editore"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Libro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Libro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Prodotto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Persona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Persona"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Prodotto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Prodotto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#ScrittoreDiLibri -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#ScrittoreDiLibri">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#ScrittoreFamoso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#ScrittoreFamoso">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#ScrittoreDiLibri"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Alfredo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Alfredo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Persona"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Frank -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Frank">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Persona"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Luger_AI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Luger_AI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Libro"/>
+        <traccia_libri:haAutore rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Frank"/>
+        <traccia_libri:copieVendute rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500000</traccia_libri:copieVendute>
+        <traccia_libri:genereLetterario>Mitologico</traccia_libri:genereLetterario>
+        <traccia_libri:numeroPagine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</traccia_libri:numeroPagine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Luigi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Luigi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Persona"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Pearson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Pearson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Editore"/>
+        <traccia_libri:haPubblicato rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#The_art_of_prolog"/>
+        <traccia_libri:haPubblicato rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#The_art_of_prolog2"/>
+        <traccia_libri:èAutorevole rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</traccia_libri:èAutorevole>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Saldang -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Saldang">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Persona"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Semantic_Web_Primer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Semantic_Web_Primer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Libro"/>
+        <traccia_libri:haAutore rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Luigi"/>
+        <traccia_libri:copieVendute rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12000</traccia_libri:copieVendute>
+        <traccia_libri:genereLetterario>Semantica</traccia_libri:genereLetterario>
+        <traccia_libri:numeroPagine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</traccia_libri:numeroPagine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#The_art_of_prolog -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#The_art_of_prolog">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Libro"/>
+        <traccia_libri:haAutore rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Alfredo"/>
+        <traccia_libri:haAutore rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Saldang"/>
+        <traccia_libri:copieVendute rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200000</traccia_libri:copieVendute>
+        <traccia_libri:genereLetterario>Mitologico</traccia_libri:genereLetterario>
+        <traccia_libri:numeroPagine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800</traccia_libri:numeroPagine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#The_art_of_prolog2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#The_art_of_prolog2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Libro"/>
+        <traccia_libri:haAutore rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Saldang"/>
+        <traccia_libri:copieVendute rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</traccia_libri:copieVendute>
+        <traccia_libri:genereLetterario>Mitologico</traccia_libri:genereLetterario>
+        <traccia_libri:numeroPagine rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">850</traccia_libri:numeroPagine>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Canzone"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Cd"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Libro"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Editore"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Persona"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Prodotto"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Luger_AI"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Semantic_Web_Primer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#The_art_of_prolog"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#The_art_of_prolog2"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="#L">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#P">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#pagine">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#copie">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#E">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S5</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Libro"/>
+                        <swrl:argument1 rdf:resource="#L"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#haAutore"/>
+                                <swrl:argument1 rdf:resource="#L"/>
+                                <swrl:argument2 rdf:resource="#P"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#BestSeller"/>
+                                        <swrl:argument1 rdf:resource="#L"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#ScrittoreFamoso"/>
+                        <swrl:argument1 rdf:resource="#P"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Persona"/>
+                        <swrl:argument1 rdf:resource="#P"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#èAutoreDi"/>
+                                <swrl:argument1 rdf:resource="#P"/>
+                                <swrl:argument2 rdf:resource="#L"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Libro"/>
+                                        <swrl:argument1 rdf:resource="#L"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#ScrittoreDiLibri"/>
+                        <swrl:argument1 rdf:resource="#P"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Libro"/>
+                        <swrl:argument1 rdf:resource="#L"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#numeroPagine"/>
+                                <swrl:argument1 rdf:resource="#L"/>
+                                <swrl:argument2 rdf:resource="#pagine"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="#pagine"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#copieVendute"/>
+                                                <swrl:argument1 rdf:resource="#L"/>
+                                                <swrl:argument2 rdf:resource="#copie"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="#copie"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#haPubblicato"/>
+                                                                <swrl:argument1 rdf:resource="#E"/>
+                                                                <swrl:argument2 rdf:resource="#L"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#èAutorevole"/>
+                                                                        <swrl:argument1 rdf:resource="#E"/>
+                                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#BestSeller"/>
+                        <swrl:argument1 rdf:resource="#L"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Persona"/>
+                        <swrl:argument1 rdf:resource="#P"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#èAutoreDi"/>
+                                <swrl:argument1 rdf:resource="#P"/>
+                                <swrl:argument2 rdf:resource="#L"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#haAutore"/>
+                        <swrl:argument1 rdf:resource="#L"/>
+                        <swrl:argument2 rdf:resource="#P"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#Persona"/>
+                        <swrl:argument1 rdf:resource="#P"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#èAutoreDi"/>
+                                <swrl:argument1 rdf:resource="#P"/>
+                                <swrl:argument2 rdf:resource="#L"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/paolo/ontologies/2025/1/traccia_libri#èUnLetterato"/>
+                        <swrl:argument1 rdf:resource="#P"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

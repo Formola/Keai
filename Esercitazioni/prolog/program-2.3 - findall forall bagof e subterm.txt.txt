@@ -1,0 +1,3 @@
+findall(Sub,(and_gate(Term,I1,I2,Out),subterm(Sub,Term)),Bag).
+forall((and_gate(Term,I1,I2,Out),subterm(Sub,Term)),(compound(Sub),print(Sub))).
+bagof(Sub,(and_gate(Term,I1,I2,Out),subterm(Sub,Term)),Bag).

@@ -1,0 +1,608 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/luigi/ontologies/2023/10/EsempioSWRL"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/luigi/ontologies/2023/10/EsempioSWRL">
+    <Prefix name="" IRI="http://www.semanticweb.org/luigi/ontologies/2023/10/EsempioSWRL"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Autore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CD"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Canzone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Editore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Libro"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Persona"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Prodotto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ScrittoreDiLibri"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haAutore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haCoautore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haPubblicato"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#èAutoreDi"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#copieVendute"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#genereLetterario"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numeroPagine"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#èAutorevole"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#èBestseller"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#èUnArtista"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#èUnLetterato"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#èUnoScrittoreFamoso"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RBA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#alfredo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#francesca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#il_labirinto"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#la_notte_eterna"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#paolo"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Autore"/>
+        <Class IRI="#Persona"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CD"/>
+        <Class IRI="#Prodotto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Canzone"/>
+        <Class IRI="#Prodotto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Libro"/>
+        <Class IRI="#Prodotto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ScrittoreDiLibri"/>
+        <Class IRI="#Persona"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Editore"/>
+        <NamedIndividual IRI="#RBA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Autore"/>
+        <NamedIndividual IRI="#alfredo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Persona"/>
+        <NamedIndividual IRI="#alfredo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ScrittoreDiLibri"/>
+        <NamedIndividual IRI="#alfredo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Autore"/>
+        <NamedIndividual IRI="#francesca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Persona"/>
+        <NamedIndividual IRI="#francesca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ScrittoreDiLibri"/>
+        <NamedIndividual IRI="#francesca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Libro"/>
+        <NamedIndividual IRI="#il_labirinto"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Prodotto"/>
+        <NamedIndividual IRI="#il_labirinto"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Libro"/>
+        <NamedIndividual IRI="#la_notte_eterna"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Prodotto"/>
+        <NamedIndividual IRI="#la_notte_eterna"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Autore"/>
+        <NamedIndividual IRI="#paolo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Persona"/>
+        <NamedIndividual IRI="#paolo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ScrittoreDiLibri"/>
+        <NamedIndividual IRI="#paolo"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haPubblicato"/>
+        <NamedIndividual IRI="#RBA"/>
+        <NamedIndividual IRI="#il_labirinto"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haPubblicato"/>
+        <NamedIndividual IRI="#RBA"/>
+        <NamedIndividual IRI="#la_notte_eterna"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#èAutoreDi"/>
+        <NamedIndividual IRI="#alfredo"/>
+        <NamedIndividual IRI="#il_labirinto"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#èAutoreDi"/>
+        <NamedIndividual IRI="#francesca"/>
+        <NamedIndividual IRI="#il_labirinto"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haAutore"/>
+        <NamedIndividual IRI="#il_labirinto"/>
+        <NamedIndividual IRI="#alfredo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haAutore"/>
+        <NamedIndividual IRI="#il_labirinto"/>
+        <NamedIndividual IRI="#francesca"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haAutore"/>
+        <NamedIndividual IRI="#la_notte_eterna"/>
+        <NamedIndividual IRI="#paolo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#èAutoreDi"/>
+        <NamedIndividual IRI="#paolo"/>
+        <NamedIndividual IRI="#la_notte_eterna"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#èAutorevole"/>
+        <NamedIndividual IRI="#RBA"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#èUnLetterato"/>
+        <NamedIndividual IRI="#alfredo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#èUnoScrittoreFamoso"/>
+        <NamedIndividual IRI="#alfredo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#èUnLetterato"/>
+        <NamedIndividual IRI="#francesca"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#èUnoScrittoreFamoso"/>
+        <NamedIndividual IRI="#francesca"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#copieVendute"/>
+        <NamedIndividual IRI="#il_labirinto"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">100000000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#genereLetterario"/>
+        <NamedIndividual IRI="#il_labirinto"/>
+        <Literal>Storico</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroPagine"/>
+        <NamedIndividual IRI="#il_labirinto"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">450</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#èBestseller"/>
+        <NamedIndividual IRI="#il_labirinto"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#copieVendute"/>
+        <NamedIndividual IRI="#la_notte_eterna"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">6784</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#genereLetterario"/>
+        <NamedIndividual IRI="#la_notte_eterna"/>
+        <Literal>Mitologico</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroPagine"/>
+        <NamedIndividual IRI="#la_notte_eterna"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">250</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#èUnLetterato"/>
+        <NamedIndividual IRI="#paolo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#haAutore"/>
+        <ObjectProperty IRI="#èAutoreDi"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#haCoautore"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#haAutore"/>
+        <Class IRI="#Prodotto"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#haCoautore"/>
+        <Class IRI="#Persona"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#haPubblicato"/>
+        <Class IRI="#Editore"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#èAutoreDi"/>
+        <Class IRI="#Persona"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haAutore"/>
+        <Class IRI="#Persona"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haCoautore"/>
+        <Class IRI="#Persona"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haPubblicato"/>
+        <Class IRI="#Libro"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haPubblicato"/>
+        <Class IRI="#Prodotto"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#èAutoreDi"/>
+        <Class IRI="#Prodotto"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#copieVendute"/>
+        <Class IRI="#Prodotto"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#genereLetterario"/>
+        <Class IRI="#Libro"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#genereLetterario"/>
+        <Class IRI="#Prodotto"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numeroPagine"/>
+        <Class IRI="#Libro"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numeroPagine"/>
+        <Class IRI="#Prodotto"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#èAutorevole"/>
+        <Class IRI="#Editore"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#èBestseller"/>
+        <Class IRI="#Prodotto"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#èUnArtista"/>
+        <Class IRI="#Persona"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#èUnLetterato"/>
+        <Class IRI="#Persona"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#èUnoScrittoreFamoso"/>
+        <Class IRI="#Persona"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#copieVendute"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#genereLetterario"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#numeroPagine"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#èAutorevole"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#èBestseller"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#èUnArtista"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#èUnLetterato"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#èUnoScrittoreFamoso"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S5</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Autore"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Libro"/>
+                <Variable IRI="#l"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#èAutoreDi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#l"/>
+            </ObjectPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#èBestseller"/>
+                <Variable IRI="#l"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#èUnoScrittoreFamoso"/>
+                <Variable IRI="#x"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S4</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Libro"/>
+                <Variable IRI="#l"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Editore"/>
+                <Variable IRI="#e"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#haPubblicato"/>
+                <Variable IRI="#e"/>
+                <Variable IRI="#l"/>
+            </ObjectPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#èAutorevole"/>
+                <Variable IRI="#e"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#numeroPagine"/>
+                <Variable IRI="#l"/>
+                <Variable IRI="#numL"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#numL"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">200</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#copieVendute"/>
+                <Variable IRI="#l"/>
+                <Variable IRI="#numV"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#numV"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1000000</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#èBestseller"/>
+                <Variable IRI="#l"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>riclassificazione</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S3</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Persona"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Libro"/>
+                <Variable IRI="#l"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#èAutoreDi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#l"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Autore"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#ScrittoreDiLibri"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>haAutore_rule</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Persona"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Libro"/>
+                <Variable IRI="#l"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#èAutoreDi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#l"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#haAutore"/>
+                <Variable IRI="#l"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S2</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Persona"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Libro"/>
+                <Variable IRI="#l"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#èAutoreDi"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#l"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#èUnLetterato"/>
+                <Variable IRI="#x"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

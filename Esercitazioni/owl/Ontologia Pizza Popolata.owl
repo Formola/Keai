@@ -1,0 +1,399 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#"
+     xml:base="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#haAmico -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#haAmico">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Persona"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Persona"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#haBase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#haBase">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#èBaseDi"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Pizza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#BasePizza"/>
+        <rdfs:comment>relazione che data una pizza, indica quale è la sua base</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#haIngrediente -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#haIngrediente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Pizza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Ingrediente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#lavoraCon -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#lavoraCon">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Persona"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Persona"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#èBaseDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#èBaseDi">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#BasePizza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Pizza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#haPrezzo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#haPrezzo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Pizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#BasePerMargherita -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#BasePerMargherita">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#BasePizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#BasePizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#BasePizza">
+        <rdfs:comment>base sarà la superficie su cui poggeranno tutti gli ingredienti dlela pizza</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Base_Deep_Dish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Base_Deep_Dish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#BasePizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Base_Deep_Pan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Base_Deep_Pan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#BasePizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Basilico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Basilico">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Ingrediente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Cliente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Cliente">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Persona"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Fattorino"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Cuoco -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Cuoco">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Fattorino -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Fattorino">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Ingrediente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Ingrediente">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#ProdottoAlimentare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Latticino -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Latticino">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Ingrediente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Mozzarella -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Mozzarella">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Latticino"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Ortaggio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Ortaggio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Ingrediente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Persona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Persona"/>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Pizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Pizza"/>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Pizza_Margherita -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Pizza_Margherita">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Pizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#haIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Basilico"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#haIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Mozzarella"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#haIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Pomodoro"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#haBase"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#BasePerMargherita"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Pizza_Marinara -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Pizza_Marinara">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Pomodoro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Pomodoro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Ingrediente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#ProdottoAlimentare -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#ProdottoAlimentare"/>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Spinaci -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Spinaci">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Verdura"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Verdura -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Verdura">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Ingrediente"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#alfredo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#alfredo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Fattorino"/>
+        <haAmico rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#marco"/>
+        <lavoraCon rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#marco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#baseDeepDishAmericana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#baseDeepDishAmericana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Base_Deep_Dish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#basePizzaCampana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#basePizzaCampana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#BasePerMargherita"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#basePizzaNapoletana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#basePizzaNapoletana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#BasePerMargherita"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#marco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#marco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Cliente"/>
+        <haAmico rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#paolo"/>
+        <lavoraCon rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#paolo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#margheritaStarita -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#margheritaStarita">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Pizza_Margherita"/>
+        <haBase rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#basePizzaCampana"/>
+        <haBase rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#basePizzaNapoletana"/>
+        <haIngrediente rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#mozzarellaBufalaNapoletana"/>
+        <haIngrediente rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#pomodoroSorrentino"/>
+        <haPrezzo rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.0</haPrezzo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#mozzarellaBufalaNapoletana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#mozzarellaBufalaNapoletana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Mozzarella"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#paolo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#paolo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Cuoco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#pomodoroSorrentino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#pomodoroSorrentino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Pomodoro"/>
+        <haPrezzo rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.0</haPrezzo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#BasePizza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Ingrediente"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/luigi/MergedFinalontologies/2024/10/myPizzaOntology#Persona"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
